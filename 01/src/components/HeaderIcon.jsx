@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import userFace from '../assets/Ellipse 2.png'
 
 HeaderIcon.propTypes = {
     isLogin:PropTypes.bool
 };
 HeaderIcon.defaultProps ={
-    isLogin:false
+    isLogin:true
 };
 
 function HeaderIcon(props) {
@@ -144,7 +145,8 @@ function HeaderIcon(props) {
     </g>
     
     </svg>
-    let userFoto = <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="75px" viewBox="0 0 64 64" aria-hidden="true" role="img" class="iconify iconify--emojione" preserveAspectRatio="xMidYMid meet"><circle cx="32" cy="32" r="30" fill="#4bd37b"/><path fill="#ffffff" d="M46 14L25 35.6l-7-7.2l-7 7.2L25 50l28-28.8z"/></svg>
+    let userFoto = 
+    <img src={userFace} alt="userFace"/>
     return (
         props.isLogin ? userFoto:icon
     );

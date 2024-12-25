@@ -1,5 +1,7 @@
 import React from 'react';
 import HeaderIcon from './HeaderIcon';
+import Searching from './Searching';
+import logo from '../assets/netflix.png'
 
 const Header = () => {
     const NowYear = new Date().toDateString();
@@ -7,13 +9,13 @@ const Header = () => {
         <>
             <header>
        <div className="right-head"> 
-            {/* <img src={logo} alt="logo-netflix" /> */}
+            <img src={logo} alt="logo-netflix"/>
             <div className="inline"> {NowYear} Friday July 8th</div>
         </div>
         <div className="left-head">
-            <h6><i className="fa-solid fa-magnifying-glass fa-2xl"></i></h6>
+            <Searching></Searching>
+            {/* <h6><i className="fa-solid fa-magnifying-glass fa-2xl"></i></h6> */}
             <HeaderIcon></HeaderIcon>
-            {/* <img src={foto} alt="foto"> */}
         </div>
     </header>
         </>
