@@ -7,7 +7,9 @@ import TextContent from "./components/TextContent"
 import Block from "./components/Block"
 import TextPictures from "./components/TextPictures"
 import Pictures from "./components/Pictures"
-import logo from "./assets/netflix.png"
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/js/bootstrap.bundle.min'
+
 
 function App() {
   
