@@ -18,9 +18,9 @@ function Searching(props) {
 
     let[value, setFilmName] = useState('')
     
-    // const filtered = filmList.filter(film => {
-    //     return film.name.toLowerCase().includes(value.toLowerCase());
-    // })
+    const filtered = filmList.filter(film => {
+        return film.toLowerCase().includes(value.toLowerCase());
+    })
 
     const [isOpen, setIsOpen] = useState(true)
 
@@ -48,7 +48,7 @@ function Searching(props) {
                 <ul>
                    {
                    value && isOpen ? 
-                   filmList.map((film, index)=>{
+                   filtered.map((film, index)=>{
                         return (
                         <li key ={index}
                             onClick={itemClick}>

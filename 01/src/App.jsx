@@ -7,8 +7,9 @@ import TextContent from "./components/TextContent"
 import Block from "./components/Block"
 import TextPictures from "./components/TextPictures"
 import Pictures from "./components/Pictures"
-// import 'bootstrap/dist/css/bootstrap.min.css'
-// import 'bootstrap/dist/js/bootstrap.bundle.min'
+import Pricing from "./components/Pricing"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+    <Pricing></Pricing>
     <main>
     <Header></Header>
     <TextContent></TextContent>

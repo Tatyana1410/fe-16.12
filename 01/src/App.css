@@ -135,7 +135,13 @@ h5{
 img{
     width: 100%;
 }
+input{
+   border: none;
+   height: 24px;
+}
 li{
-    background-color: aliceblue;
+    background-color: rgb(48, 53, 58);
+    color: aliceblue;
+    list-style: none;
 }
     
