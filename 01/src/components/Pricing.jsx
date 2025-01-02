@@ -20,11 +20,23 @@ function Pricing(props) {
         gb:15
     }]
 
+    const plans =[ { 
+        price:0, 
+        user:10, 
+        gb:2
+    },
+     { 
+        price:15, 
+        user:20, 
+        gb:10
+    },
+    { 
+        price:29, 
+        user:30, 
+        gb:15
+    }]
 
 
-    // const [price, setPrice] = useState(free);
-    // const [user, setUser] = useState('');
-    // const [gb, setGb] = useState('');
 
 
 
@@ -61,16 +73,18 @@ function Pricing(props) {
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">$
-                {free.map(item=>item.price)}
-                           
-                <small class="text-body-secondary fw-light">/mo</small></h1>
+                {/* {free.map(item=>item.price)} */}
+                {plans[0][`price`]}
+                
+                        <small class="text-body-secondary fw-light">/mo</small> 
+                           </h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>
-                {free.map(item=>item.user)}
-                  users included</li>
+                {free.map(item=>item.user)} 
+                 users included</li>
               <li>
-              {free.map(item=>item.gb)}
-                GB of storage</li>
+              {free.map(item=>item.gb)} 
+                 GB of storage</li>
               <li>Email support</li>
               <li>Help center access</li>
             </ul>
@@ -85,11 +99,12 @@ function Pricing(props) {
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">$
-            {pro.map(item=>item.price)}
+            {plans[1][`price`]}
             <small class="text-body-secondary fw-light">/mo</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>{pro.map(item=>item.user)} users included</li>
-              <li> {pro.map(item=>item.gb)} GB of storage</li>
+              <li>
+              {plans[1]['user']}users included</li>
+              <li> {plans[1]['gb']} GB of storage</li>
               <li>Priority email support</li>
               <li>Help center access</li>
             </ul>
