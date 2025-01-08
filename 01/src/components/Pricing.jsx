@@ -1,7 +1,23 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 
 
 function Pricing(props) {
+  const[show, setShow]=useState(false);
+
+  let [value, setValue] = useState(0);
+  let prevValue = useRef(null);
+
+  useEffect(()=>{
+    prevValue.current = value;
+    }, [value]);
+
+    let [change, setChange] = useState('');
+    let prevChange = useRef(null);
+    useEffect(()=>{
+      prevChange.current = change;
+      }, [change]);
+
+
 
     
     const free =[ { 
@@ -88,7 +104,8 @@ function Pricing(props) {
               <li>Email support</li>
               <li>Help center access</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary"
+            onClick={e=>setChange('Sign up for free')}>Sign up for free</button>
           </div>
         </div>
       </div>
@@ -108,7 +125,8 @@ function Pricing(props) {
               <li>Priority email support</li>
               <li>Help center access</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+            <button type="button" class="w-100 btn btn-lg btn-primary"
+            onClick={e=>setChange('Get started')}>Get started</button>
           </div>
         </div>
       </div>
@@ -126,13 +144,33 @@ function Pricing(props) {
               <li>Phone and email support</li>
               <li>Help center access</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+            <button type="button" class="w-100 btn btn-lg btn-primary" 
+            onClick={e=>setChange('Contact us')}
+            >Contact us</button>
           </div>
         </div>
       </div>
     </div>
 
+    <h3>Previous choise: {prevChange.current}</h3>
 
+    
+      <button className='btn btn-lg btn-danger my-2' 
+      onClick={()=>setShow(!show)}>{show ? 'close': 'open range'}</button>
+        {show && <div class="col">
+          <label for="customRange3" className="form-label">Range</label>
+          <input type="range" 
+          className="form-range" 
+          min="0" 
+          max="5" 
+          step="0.5" 
+          id="customRange3"
+          onChange={e=>setValue(e.target.value)}
+          value={value}/>
+          <h3>Previous value: {prevValue.current}</h3>
+        </div>}
+
+        
    
   </main>
 
