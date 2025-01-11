@@ -14,6 +14,9 @@ function Pricing(props) {
     let [change, setChange] = useState('');
     let prevChange = useRef(null);
     useEffect(()=>{
+      if (prevChange.current!==null){
+        alert (`Previous value: ${prevChange.current}`);
+      }
       prevChange.current = change;
       }, [change]);
 
