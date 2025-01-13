@@ -10,14 +10,15 @@ import Pictures from "./components/Pictures"
 import Pricing from "./components/Pricing"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
-
+import Main from "./components/price/Main"
 
 function App() {
   
 
   return (
     <>
-    <Pricing></Pricing>
+    {/* <Pricing></Pricing> */}
+    <Main></Main>
     <main>
     <Header></Header>
     <TextContent></TextContent>
