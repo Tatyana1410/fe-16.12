@@ -1,5 +1,6 @@
 import React, {createContext, useState } from 'react';
 import List from './List';
+import Product from './Product';
 export const UserContext = createContext();
 
 function Main(props) {
@@ -30,58 +31,55 @@ function Main(props) {
             }   
             return prod;
         });
+        setProdut(newProduct);}
 
-        setProdut(newProduct)
+    const [selectedProduct, setSelectedProduct]=useState([]);
+    function selectProduct (product){
+        setSelectedProduct(selectProduct=>[...selectProduct, product])}
 
-    function remove(index){
-            setProdut(product=>product.filter((item, idx)=>index != idx));
-        }
-                
-
-        
+    function remove(idx){
+        setSelectedProduct(prod=>prod.filter((value,index)=>index!=idx));
     }
+     const[show, setShow]=useState(false);
     
 
     return (
         <> 
+    
             <div className="container ">
                 <div className="row justify-content-between py-3">
-                <UserContext.Provider value={{orderCount, toggleOrder, product}}>
+                <UserContext.Provider value={{orderCount, toggleOrder, product,selectProduct, remove}}>
                 <List product={product}></List>
                 </UserContext.Provider>
 
+
+                <button className='btn btn-success p-3' 
+                    style={{width:'25%', height:'50px'}}
+                    onClick={()=>setShow(!show)}>{show ? 'Close': 'Basket'}</button>
+                    {show && 
+
                 <div className="card" style={{width: 18+'rem'}}>
                     <ul className="list-group list-group-flush">
-                        <li class="list-group-item">
-                            Ordered: {orderCount} {product.nameProduct}
+                        {selectedProduct.map((props, index)=>{
+                            return <li className="list-group-item d-flex justify-content-between" key={index}> 
+                            {props.nameProduct}  {props.price} $
+                            <button className="btn btn-danger" onClick={()=>remove(index)}>Delete</button>
                             </li>
+                        })}
+                    
+
+                    {/* <li class="list-group-item"> Ordered: {orderCount} </li> */}
                     </ul>
-                </div>
+                    
+                    
+                    
+
+                </div>}
+                {/* <Product onSelectProduct={selectProduct}></Product> */}
       
-                    {/* <div className="card" style={{width: 18+'rem'}}>
-                        <img src="..." className="card-img-top" alt="Product"/>
-                        <div className="card-body">
-                            <h5 className="card-title">Product: {product[0][`nameProduct`]}</h5>
-                            <p className="card-text">Price: {product[0][`price`]} $</p>
-                            <button className="btn btn-primary">Order</button>
-                        </div>
-                    </div>
-                    <div className="card" style={{width: 18+'rem'}}>
-                        <img src="..." className="card-img-top" alt="Product"/>
-                        <div className="card-body">
-                            <h5 className="card-title">Product: {product[1][`nameProduct`]}</h5>
-                            <p className="card-text">Price: {product[1][`price`]} $</p>
-                            <button className="btn btn-primary">Order</button>
-                        </div>
-                    </div>
-                    <div className="card" style={{width: 18+'rem'}}>
-                        <img src="..." className="card-img-top" alt="Product"/>
-                        <div className="card-body">
-                            <h5 className="card-title">Product: {product[2][`nameProduct`]}</h5>
-                            <p className="card-text">Price: {product[2][`price`]} $</p>
-                            <button className="btn btn-primary">Order</button>
-                        </div>
-                    </div> */}
+                    
+                   
+                   
 
                 </div>
             </div>

@@ -3,7 +3,7 @@ import {UserContext} from './Main';
 
 
 function Product(props) {
-    const {orderCount,product,toggleOrder,remove} = useContext(UserContext)
+    const {orderCount,product,toggleOrder,selectProduct, remove} = useContext(UserContext)
     return (
         <>
         <div className="card" style={{width: 18+'rem'}}>
@@ -13,8 +13,11 @@ function Product(props) {
                     </h5>
                     <p className="card-text">Price: {props.price} $
                     </p>
-                    <button className="btn btn-primary m-1" onClick={()=>toggleOrder(props.index)}>Order</button>
-                    <button className="btn btn-danger" onClick={()=>remove(props.index)}>Delete</button>
+                    
+                    {/* <button className="btn btn-primary m-1" onClick={()=>toggleOrder(props.index)}>Order</button> */}
+                    <button className="btn btn-primary m-1" onClick={()=>selectProduct(props)}>Select</button>
+                    {/* <button className="btn btn-danger" onClick={()=>remove(props.index)}>Delete</button> */}
+                    
                 </div>
             </div>
             
