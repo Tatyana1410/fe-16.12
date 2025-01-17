@@ -25,7 +25,7 @@ function Main(props) {
     const toggleOrder = (index)=>{
         const newProduct = product.map((prod, idx)=>{
             if(idx === index){
-                // prod.order ? setOrderCount(orderCount -1):
+                prod.order ? setOrderCount(orderCount -1):
                 setOrderCount(orderCount+1);
                 return {...prod, order:!prod.order};
             }   
@@ -41,6 +41,12 @@ function Main(props) {
         setSelectedProduct(prod=>prod.filter((value,index)=>index!=idx));
     }
      const[show, setShow]=useState(false);
+
+     const totalPrice = selectedProduct.reduce((acc, product) => {
+        const price = product.price || 0;
+        return acc + price;
+      }, 0);
+    
     
 
     return (
@@ -66,10 +72,14 @@ function Main(props) {
                             <button className="btn btn-danger" onClick={()=>remove(index)}>Delete</button>
                             </li>
                         })}
+                
                     
 
                     {/* <li class="list-group-item"> Ordered: {orderCount} </li> */}
                     </ul>
+                    <div>
+                        Загальна сума: {totalPrice}
+                    </div>
                     
                     
                     
