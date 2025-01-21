@@ -78,7 +78,7 @@ h2{
 .episodes{
     border: 3px solid rgb(255, 255, 255);
     border-radius: 10px; 
-    padding: 13px 63px;
+    padding: 13px 51px;
     color: aliceblue;
     font-size: 22px;
     font-weight: 500; 
@@ -95,7 +95,7 @@ h2{
 .pictures-film{
     display: flex; 
     column-gap: 50px;
-    width: 50%;
+    width: 70%;
 }
 .popular{
     color: rgb(255, 255, 255);
@@ -107,6 +107,7 @@ h2{
     border-radius: 50%;
     border: none;
     background-color: rgba(220, 215, 215, 0);
+    /* background-color: rgba(216, 35, 35); */
     color:rgba(255, 255, 255, 0.8);
 }
 .block{
@@ -135,6 +136,10 @@ h5{
 img{
     width: 100%;
 }
+.film-img{
+    min-width: 151px;
+    min-height: 219px;
+}
 input{
    border: none;
    height: 24px;
@@ -144,4 +149,10 @@ li{
     color: aliceblue;
     list-style: none;
 }
+.linkEl{
+    text-decoration: none;
+    color: white;
+
+}
+
     

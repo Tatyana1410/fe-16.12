@@ -15,10 +15,15 @@ function Posts({title}) {
     };
 
     
-    // setTimeout(loadMore, 3000)
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //       loadMore();
+    //     }, 3000);
     
+    //     // Залежимо від visability, бо щоразу після збільшення кількості
+    //     // ми хочемо знову ініціювати новий таймер
+    //   }, [visability]);
     
-
 
     return (
         <>

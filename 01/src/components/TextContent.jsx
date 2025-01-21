@@ -2,6 +2,10 @@ import React from 'react';
 import Films from './Films';
 import TitleElemet from './TitleElemet';
 import Buttons from './Buttons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faStar} from '@fortawesome/free-solid-svg-icons';
+
+
 
 
 const TextContent = () => {
@@ -17,18 +21,16 @@ const TextContent = () => {
             {/* Supernatural  */}
         </h4>
         <TitleElemet title = 'Stranger Things'></TitleElemet>
-        <h2>2019 DIRECTOR: <span className="color">Shawn Levy</span> seasons: <span className="color">3 (5 Episodes)</span></h2>
+        <h2>2019 DIRECTOR: <span className="color">Shawn Levy  </span>     seasons: <span className="color">3 (5 Episodes)</span></h2>
         <p className="text-file"> 
         'In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.'</p>
         
         <p className="size-star">
-            {/* <span style="color:yellow;"> */}
-            {/* <i className="fa-solid fa-star"></i>
-            <i className="fa-solid fa-star"></i>
-            <i className="fa-solid fa-star"></i></span>
-            <span style="color:white;">
-            <i className="fa-regular fa-star"></i>
-            <i className="fa-regular fa-star"></i></span> */}
+            <FontAwesomeIcon icon={faStar} style={{color:'yellow'}}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faStar} style={{color:'yellow'}}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faStar} style={{color:'yellow'}}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faStar}/>
         </p>
         <Buttons></Buttons>
         
