@@ -146,7 +146,7 @@ function HeaderIcon(props) {
     
     </svg>
     let userFoto = 
-    <img src={userFace} alt="userFace"/>
+    <img src={userFace} className='userFace' alt="userFace"/>
     return (
         props.isLogin ? userFoto:icon
     );

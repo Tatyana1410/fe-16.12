@@ -14,7 +14,7 @@ Films.defaultProps = {
 function Films(props) {
     let genre = ['Drama', 'Thriller', 'Supernatural'];
     let genreEl = genre.map((item, index)=>{
-        return <span key={index}> {item} <FontAwesomeIcon icon={faSlash} style={{rotate:'52deg'}}/></span>
+        return <span key={index}> {item} <FontAwesomeIcon icon={faSlash} className='slash' style={{rotate:'52deg'}}/></span>
          
     });
     return (
