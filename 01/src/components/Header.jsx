@@ -7,9 +7,16 @@ import logo from '../assets/netflix.png'
 
 const Header = () => {
     
+    const days = [
+        "Sunday","Monday","Tuesday","Wednesday", "Thursday","Friday","Saturday"];
+    const months = [
+        "January","February","March","April","May","June",
+        "July","August","September","October","November","December"
+        ];
+
     const today = new Date();
-    const day = today.getDay().toString();
-    const month = (today.getMonth()+1).toString();
+    const dayName = days[today.getDay()];     
+    const monthName = months[today.getMonth()];
     const date = today.getDate();
 
     return (
@@ -17,8 +24,7 @@ const Header = () => {
             <header>
        <div className="right-head"> 
        <img src={logo} alt="logo-netflix"/>
-            <div className="inline"> {day} {month} {date}th 
-                 {/* Friday July 8th */}
+            <div className="inline"> {dayName} {monthName} {date}th 
                  </div>
         </div>
         <div className="left-head">

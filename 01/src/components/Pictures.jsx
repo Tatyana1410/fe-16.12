@@ -59,18 +59,7 @@ function Pictures (props){
              </Swiper>
       </div>  
 
-       {/* <div className="pictures-film"> 
-                <Link className='linkEl'to="/squid">
-                    <img className='film-img' src={film1} alt="film" /></Link>
-                <Link className='linkEl'to="/breaking">
-                    <img className='film-img' src={film2} alt="film" to="/breaking"/> </Link>
-                <Link className='linkEl' to="/rain"> 
-                    <img className='film-img' src={film3} alt="film" /></Link>
-                <Link className='linkEl' to="/life">
-                    <img className='film-img' src={film4} alt="film" /></Link>
-                <Link className='linkEl' to="/money">
-                    <img className='film-img' src={film5} alt="film" /></Link>
-            </div> */}
+       
 
         </>
     );

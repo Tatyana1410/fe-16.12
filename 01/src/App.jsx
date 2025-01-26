@@ -23,29 +23,28 @@ function App() {
 
   return (
     <>
-    {/* <Pricing></Pricing> */}
-    {/* <Main></Main> */}
-    {/* <Posts title = 'Posts of users'></Posts> */}
-    <main>
-    <Header></Header>
-    <TextContent></TextContent>
-    <Block></Block>
+      {/* <Pricing></Pricing> */}
+      {/* <Main></Main> */}
+      {/* <Posts title = 'Posts of users'></Posts> */}
+      <main>
+        <Header></Header>
+        <TextContent></TextContent>
+        <Block></Block>
+        
+        <Router>
+        {/* <TextPictures></TextPictures> */}
+          <Pictures></Pictures>
+            <Routes>
+              <Route path="/main" element={<MainPage></MainPage>}></Route>
+              <Route path="/breaking" element={<Breaking></Breaking>}></Route>
+              <Route path="/squid" element={<Squid></Squid>}></Route>
+              <Route path="/life" element={<Life></Life>}></Route>
+              <Route path="/money" element={<Money></Money>}></Route>
+              <Route path="/rain" element={<Rain></Rain>}></Route>
+            </Routes>
+        </Router>
     
-    
-    <Router>
-    {/* <TextPictures></TextPictures> */}
-    <Pictures></Pictures>
-      <Routes>
-        <Route path="/main" element={<MainPage></MainPage>}></Route>
-        <Route path="/breaking" element={<Breaking></Breaking>}></Route>
-        <Route path="/squid" element={<Squid></Squid>}></Route>
-        <Route path="/life" element={<Life></Life>}></Route>
-        <Route path="/money" element={<Money></Money>}></Route>
-        <Route path="/rain" element={<Rain></Rain>}></Route>
-      </Routes>
-    </Router>
-    
-    </main>
+      </main>
     
       
     </>

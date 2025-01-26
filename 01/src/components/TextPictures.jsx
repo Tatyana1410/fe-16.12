@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -12,10 +15,10 @@ function TextPictures ({onSlidePrev,onSlideNext}){
         <p className="popular"><Link className='linkEl' to="/main">POPULAR THIS WEEK </Link></p>
         <p className="next">
                 <button className="next-film" onClick={onSlidePrev} >
-                     <i className="fa-solid fa-circle-chevron-left"></i> 
+                     <FontAwesomeIcon icon={faChevronCircleLeft}/> 
                     </button>
                 <button className="next-film" onClick={onSlideNext}>
-                    <i className="fa-solid fa-circle-chevron-right"i/> 
+                    <FontAwesomeIcon icon={faChevronCircleRight}/> 
                 </button>
             </p>
     </div>

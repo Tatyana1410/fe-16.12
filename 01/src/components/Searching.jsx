@@ -6,7 +6,7 @@ function Searching(props) {
         border:'none',
     }
 
-    const listFilm = [`new`,`old`,`mild`]
+    const listFilm = [`new`,`old`,`mild`,'news']
     const [filmList, setFilmList]=useState(listFilm);
 
     
