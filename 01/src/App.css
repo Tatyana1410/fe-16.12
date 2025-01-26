@@ -156,7 +156,7 @@ li{
     color: white;
 }
 
-@media (min-width:767px) {
+@media (max-width:1000px) {
     main{
         padding: 40px 40px;
     }
@@ -168,6 +168,11 @@ li{
     }
     .text-content{
         width: 90%;
+    }
+    .text-pict{
+        width: 90%; 
+        margin-top: 30px;
+        margin-bottom: 10px;
     }
     h1{ 
         font-size: 36px;
@@ -181,7 +186,7 @@ li{
     }
     .stream{
         padding: 8px 27px;
-        margin-right: 40px;
+        margin-right: 10px;
     }
     .episodes{
         padding: 7px 26px;
@@ -226,7 +231,7 @@ li{
     
 }
 
-@media (min-width:320px) {
+@media (max-width:500px) {
     main{
         padding: 20px 20px;
     }
@@ -260,7 +265,7 @@ li{
     }
     .stream{
         padding: 8px 30px;
-        margin-right: 0px;
+        margin-right: 10px;
         margin-bottom: 10px;
         font-size: 20px;
     }
@@ -293,14 +298,14 @@ li{
         margin-bottom:20px ; 
     }
     img{
-        width: 100%;
+        width: 30%;
     }
     .film-img{
         min-width: 100px;
         min-height: 150px;
     }
     .userFace{
-        width: 30%;
+        width: 20%;
     }
     
 }
