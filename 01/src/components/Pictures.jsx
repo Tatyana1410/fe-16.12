@@ -36,9 +36,14 @@ function Pictures (props){
             <TextPictures onSlidePrev={slidePrev} onSlideNext={slideNext}></TextPictures>
             <div className="pictures-film"> 
 
-            <Swiper
+            <Swiper init="false"
                 ref={swiperRef}
-                slidesPerView={4}
+                slidesPerView={2} 
+                breakpoints={{
+                    500: {
+                      slidesPerView: 4
+                    }
+                  }}                   
                 spaceBetween={30}
                 freeMode={true}
                 pagination={{
